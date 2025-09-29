@@ -1,0 +1,6 @@
+CREATE TABLE Orders(
+OrderID INT PRIMARY KEY,
+OrderDate DATETIME NOT NULL,
+TotalAmount Decimal(10,2) NOT NULL,
+EmployeeID INT FOREIGN KEY
+);
