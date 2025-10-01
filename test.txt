@@ -1,1 +1,1 @@
-1 3 salesbymonth firable ordersandrevenuebyday
+weeklysales peaksales salesbymonth firable ordersandrevenuebyday
