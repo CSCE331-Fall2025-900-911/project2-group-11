@@ -177,8 +177,126 @@ def fill_baseInfo(url: str):
             Inventory(ingredient_id=10, ingredient_name="pomegranate",   on_hand_quantity=3),
             Inventory(ingredient_id=11, ingredient_name="milk tea",      on_hand_quantity=15),
             Inventory(ingredient_id=12, ingredient_name="green tea",     on_hand_quantity=20),
+            Inventory(ingredient_id=13, ingredient_name="cup",           on_hand_quantity=40),
+            Inventory(ingredient_id=14, ingredient_name="napkin",        on_hand_quantity=29),
+            Inventory(ingredient_id=15, ingredient_name="straw",         on_hand_quantity=53),
+            Inventory(ingredient_id=16, ingredient_name="lid",           on_hand_quantity=40),
         ]
         session.add_all(inventory)
+
+        product_recipe = [
+            # Milk teas
+            ProductRecipe(product_id=1,  ingredient_id=1,  quantity_per_unit=1),   # mango
+            ProductRecipe(product_id=1,  ingredient_id=11, quantity_per_unit=1),   # milk tea
+            ProductRecipe(product_id=1,  ingredient_id=13, quantity_per_unit=1),   # cup
+            ProductRecipe(product_id=1,  ingredient_id=14, quantity_per_unit=1),   # napkin
+            ProductRecipe(product_id=1,  ingredient_id=15, quantity_per_unit=1),   # straw
+            ProductRecipe(product_id=1,  ingredient_id=16, quantity_per_unit=1),   # lid
+
+            ProductRecipe(product_id=2,  ingredient_id=2,  quantity_per_unit=1),
+            ProductRecipe(product_id=2,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=2,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=2,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=2,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=3,  ingredient_id=3,  quantity_per_unit=1),
+            ProductRecipe(product_id=3,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=3,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=3,  ingredient_id=14, quantity_per_unit=1),
+            ProductRecipe(product_id=3,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=3,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=4,  ingredient_id=4,  quantity_per_unit=1),
+            ProductRecipe(product_id=4,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=4,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=4,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=4,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=5,  ingredient_id=5,  quantity_per_unit=1),
+            ProductRecipe(product_id=5,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=5,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=5,  ingredient_id=14, quantity_per_unit=1),
+            ProductRecipe(product_id=5,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=5,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=6,  ingredient_id=6,  quantity_per_unit=1),
+            ProductRecipe(product_id=6,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=6,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=6,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=6,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=7,  ingredient_id=7,  quantity_per_unit=1),
+            ProductRecipe(product_id=7,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=7,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=7,  ingredient_id=14, quantity_per_unit=1),
+            ProductRecipe(product_id=7,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=7,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=8,  ingredient_id=8,  quantity_per_unit=1),
+            ProductRecipe(product_id=8,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=8,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=8,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=8,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=9,  ingredient_id=9,  quantity_per_unit=1),
+            ProductRecipe(product_id=9,  ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=9,  ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=9,  ingredient_id=14, quantity_per_unit=1),
+            ProductRecipe(product_id=9,  ingredient_id=15, quantity_per_unit=1),
+            ProductRecipe(product_id=9,  ingredient_id=16, quantity_per_unit=1),
+
+            ProductRecipe(product_id=10, ingredient_id=10, quantity_per_unit=1),
+            ProductRecipe(product_id=10, ingredient_id=11, quantity_per_unit=1),
+            ProductRecipe(product_id=10, ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=10, ingredient_id=15, quantity_per_unit=1),
+
+            # Green teas
+            ProductRecipe(product_id=11, ingredient_id=1,  quantity_per_unit=1),
+            ProductRecipe(product_id=11, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=11, ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=11, ingredient_id=14, quantity_per_unit=1),
+
+            ProductRecipe(product_id=12, ingredient_id=2,  quantity_per_unit=1),
+            ProductRecipe(product_id=12, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=12, ingredient_id=13, quantity_per_unit=1),
+
+            ProductRecipe(product_id=13, ingredient_id=3,  quantity_per_unit=1),
+            ProductRecipe(product_id=13, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=13, ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=13, ingredient_id=14, quantity_per_unit=1),
+
+            ProductRecipe(product_id=14, ingredient_id=4,  quantity_per_unit=1),
+            ProductRecipe(product_id=14, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=14, ingredient_id=13, quantity_per_unit=1),
+
+            ProductRecipe(product_id=15, ingredient_id=5,  quantity_per_unit=1),
+            ProductRecipe(product_id=15, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=15, ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=15, ingredient_id=14, quantity_per_unit=1),
+
+            ProductRecipe(product_id=16, ingredient_id=6,  quantity_per_unit=1),
+            ProductRecipe(product_id=16, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=16, ingredient_id=13, quantity_per_unit=1),
+
+            ProductRecipe(product_id=17, ingredient_id=7,  quantity_per_unit=1),
+            ProductRecipe(product_id=17, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=17, ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=17, ingredient_id=14, quantity_per_unit=1),
+
+            ProductRecipe(product_id=18, ingredient_id=8,  quantity_per_unit=1),
+            ProductRecipe(product_id=18, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=18, ingredient_id=13, quantity_per_unit=1),
+
+            ProductRecipe(product_id=19, ingredient_id=9,  quantity_per_unit=1),
+            ProductRecipe(product_id=19, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=19, ingredient_id=13, quantity_per_unit=1),
+            ProductRecipe(product_id=19, ingredient_id=14, quantity_per_unit=1),
+
+            ProductRecipe(product_id=20, ingredient_id=10, quantity_per_unit=1),
+            ProductRecipe(product_id=20, ingredient_id=12, quantity_per_unit=1),
+            ProductRecipe(product_id=20, ingredient_id=13, quantity_per_unit=1),
+        ]
+        session.add_all(product_recipe)
 
         session.commit()
         print("Base information inserted successfully.")
