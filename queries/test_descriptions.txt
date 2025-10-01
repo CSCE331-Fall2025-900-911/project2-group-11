@@ -1,0 +1,28 @@
+"selects sales by week of the year from 1-52"
+(weeklySales.sql)
+SELECT COUNT(*) AS orders FROM orders GROUP BY EXTRACT(WEEK FROM order_date);
+
+"selects the weeks with the top 10 most sales in descending order"
+(peakSales.sql)
+SELECT SUM(total_amount) AS total FROM orders GROUP BY EXTRACT(DAY FROM order_date) ORDER BY total DESC LIMIT 10;
+
+"selects the total number of sales per month from months 1-12"
+(salesByMonth.sql)
+SELECT COUNT(*) as orders FROM orders GROUP BY EXTRACT(MONTH FROM order_date);
+
+"selects all employees with a number of sales below a given threshold"
+(firableEmployees.sql)
+SELECT e.employee_id, e.role, COUNT(o.order_id) AS orders_handled, SUM(o.total_amount) AS revenue_processed
+FROM orders o
+JOIN employees e ON e.employee_id = o.employee_id
+WHERE e.role = 'Cashier'
+GROUP BY e.employee_id, e.role
+HAVING SUM(o.total_amount) < 240000
+ORDER BY revenue_processed DESC;
+
+"selects the total orders and revenue by the day of the week from monday to sunday"
+SELECT EXTRACT(ISODOW FROM order_date) AS iso_dow, TO_CHAR(order_date, 'Dy') AS weekday,
+       COUNT(*) AS orders_count, SUM(total_amount) AS revenue
+FROM orders
+GROUP BY iso_dow, weekday
+ORDER BY iso_dow;
