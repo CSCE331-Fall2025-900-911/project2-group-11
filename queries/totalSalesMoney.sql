@@ -1,0 +1,1 @@
+SELECT SUM(total_amount) FROM orders;

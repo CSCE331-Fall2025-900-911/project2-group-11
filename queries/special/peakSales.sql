@@ -1,0 +1,1 @@
+SELECT SUM(TotalAmount) AS total FROM orders GROUP BY EXTRACT(DAY FROM order_date) ORDER BY total LIMIT 10;
