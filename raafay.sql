@@ -1,1 +1,0 @@
-SELECT * FROM EMPLOYEES WHERE [ROLE] = 'Manager';
