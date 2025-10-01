@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM product_recipe GROUP BY product_id;
