@@ -1,1 +1,1 @@
-SELECT SUM(total_amount) AS total FROM orders GROUP BY EXTRACT(DAY FROM order_date) ORDER BY total LIMIT 10;
+SELECT SUM(total_amount) AS total FROM orders GROUP BY EXTRACT(DAY FROM order_date) ORDER BY total DESC LIMIT 10;

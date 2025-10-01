@@ -1,0 +1,1 @@
+SELECT COUNT(*) as orders FROM orders GROUP BY EXTRACT(MONTH FROM order_date);
