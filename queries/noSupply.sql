@@ -1,0 +1,1 @@
+SELECT * FROM inventory WHERE on_hand_quantity = 0;
