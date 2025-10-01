@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM orders GROUP BY EXTRACT(WEEK FROM order_date);

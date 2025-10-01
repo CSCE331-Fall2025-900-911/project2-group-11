@@ -1,0 +1,1 @@
+SELECT SUM(TotalAmount) FROM orders GROUP BY EXTRACT(HOUR FROM order_date);
